@@ -23,11 +23,11 @@ CREATE DATABASE cms;
         pageName varchar(255),
         content TEXT
         );
-		INSERT INTO cms.pages VALUES (1,'Home','This is Home page!'),
-		(2,'News','This is News page!'),
-		(3,'Contact Us','This is Contact Us page!'),
-		(4,'About Us','This is About Us page!'),
-		(5,'Services','This is Services page!');
+		INSERT INTO cms.pages VALUES (1,'Home','Welcome to my Home!'),
+		(2,'News','News page!'),
+		(3,'Contact Us','This is Contact Us page, here you can contact us'),
+		(4,'About Us','This is About Us page! Here you can find all information about us'),
+		(5,'Services','This is Services page! ere you can find all information about our services');
 ```
 After you successfully created DB go to browser -> localhost -> CMS.
 
