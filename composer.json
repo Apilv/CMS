@@ -1,0 +1,15 @@
+{
+    "name": "andrius/pilvelis",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andrius Pilvelis",
+            "email": "andrius.pilv@gmail.com"
+        }
+    ],
+    "require": {},
+        "autoload": { 
+            "files": ["src/Pages.php"] 
+        }
+}
