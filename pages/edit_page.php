@@ -31,21 +31,3 @@ function editPage($entityManager)
     }
 }
 
-
-
-if (isset($_GET["editPage"])) {
-    $page_id = $_GET["editPage"];
-    $page_name = $_GET["pageName"];
-    $page_content = $_GET["pageContent"];
-    echo
-        '<form action="" method="post">
-                Page id<br>
-                <input type="number" value="' . $page_id . '" name="pageId" readonly><br>
-                Page Name<br>
-                <input type="text" name="pageName" value="' . $page_name . '"><br>
-                Page Content<br>
-                <input type="text" name="pageContent" value="' . $page_content . '"><br>
-                <input type="submit" name="editPage" value="Submit"><br>
-            </form>';
-}
-?>

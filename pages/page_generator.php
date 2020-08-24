@@ -52,7 +52,12 @@ function generatePage()
             </body>
 
             </html>';
-    } elseif (!isset($_POST["login"]) && !isset($_GET["editPage"]) && !isset($_GET["addPage"]) && !isset($_GET["deletePage"]) && !isset($_GET["delete"]) && !isset($_GET["add"]) && !isset($_POST["editPage"])) {
+    } elseif (
+        !isset($_POST["login"]) && !isset($_GET["editPage"])
+        && !isset($_GET["addPage"]) && !isset($_GET["deletePage"])
+        && !isset($_GET["delete"]) && !isset($_GET["add"])
+        && !isset($_POST["editPage"]) && !isset($_GET["admin"])
+    ) {
 
         $min_page_id = min($pages)->getId();
 
@@ -85,7 +90,12 @@ function generatePage()
 function generateAdmin($pages)
 {
     global $db_headers, $entityManager;
-    if (isset($_POST["login"]) || isset($_GET["editPage"]) || isset($_GET["addPage"]) || isset($_GET["deletePage"]) || isset($_GET["delete"]) || isset($_GET["add"])|| isset($_POST["editPage"])) {
+    if (
+        isset($_POST["login"]) || isset($_GET["editPage"])
+        || isset($_GET["addPage"]) || isset($_GET["deletePage"])
+        || isset($_GET["delete"]) || isset($_GET["add"])
+        || isset($_POST["editPage"]) || isset($_GET["admin"])
+    ) {
         echo
             '<!DOCTYPE html>
                 <html lang="en">
@@ -109,7 +119,7 @@ function generateAdmin($pages)
             $page_id = $values->getId();
             $page_name = $values->getName();
             $page_content = $values->getContent();
-            
+
             echo
                 "<tr>
                     <td>" . $values->getId() . "</td>
@@ -125,7 +135,9 @@ function generateAdmin($pages)
         '</table>';
         addNewPage($entityManager);
         editPage($entityManager);
-                '</body>
+        // require_once('pages/edit_page.php');
+
+        '</body>
 
                 </html>';
     }
