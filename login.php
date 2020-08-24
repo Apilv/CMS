@@ -1,6 +1,6 @@
 <?php
-ob_start();
 session_start();
+ob_start();
 
 
 //LOGIN REDIRECT
@@ -22,11 +22,11 @@ if ((isset($_POST['login']) && !empty($_POST['username'])
 };
 
 if ($redirect_action) {
-   header('Location: index.php');
+   header('Location: index.php?admin');
 }
 
-?>
 
+?>
 <html lang="en">
 
 <head>
@@ -107,3 +107,4 @@ if ($redirect_action) {
 </body>
 
 </html>
+
