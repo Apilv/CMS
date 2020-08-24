@@ -13,6 +13,8 @@ $db_headers = $entityManager->getClassMetadata('Pages')->getColumnNames();
 deletePage($entityManager);
 
 
+//---------------GENERATE DYNAMIC MENU LINKS FROM DB---------------
+
 function pageLinks()
 {
     global $pages;
@@ -107,7 +109,7 @@ function generateAdmin($pages)
                     <title>CMS Admin</title>
                 </head>
                 <body>
-                    ' . pageLinks($pages) . '
+                    <a href="index.php">Logout</a>
                     <h1>Welcome to Admin section</h1>
             <table>
                 <tr>';
@@ -136,7 +138,6 @@ function generateAdmin($pages)
         '</table>';
         addNewPage($entityManager);
         editPage($entityManager);
-        // require_once('pages/edit_page.php');
 
         '</body>
 
