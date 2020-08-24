@@ -10,13 +10,12 @@
 ## How to use it:
 Copy repository URL and open it with the code editor, save the project to the root directory of your local server e.g.(AMPPS, XAMPP).
 #### Creat project DB:
-###### Open MySQL Workbench.
-Make sure that MySQL Connection Login is set to:
+Open MySQL Workbench. Make sure that MySQL Connection Login is set to:
 ```
     user = root
     password = mysql
 ```
- Connect to SQL. Create New SQL tab. Inside tab paste and execute following code:
+ Connect to SQL. Create New SQL tab. Inside a tab paste and execute following code:
 ``` 
 CREATE DATABASE cms;
 	CREATE TABLE cms.pages (
@@ -30,7 +29,7 @@ CREATE DATABASE cms;
 		(4,'About Us','This is About Us page!'),
 		(5,'Services','This is Services page!');
 ```
-After you succesfuly created DB, go to browser -> localhost, open CMS directory.
+After you successfully created DB go to browser -> localhost -> CMS.
 
 #### (Login details provided as values and placeholders)
 
